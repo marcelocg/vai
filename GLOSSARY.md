@@ -24,3 +24,7 @@ A vai construct with no direct Rust spelling that still lowers to plain Rust wit
 
 **Crate interop**:
 Calling any Rust crate from vai source, and consuming vai code from Rust, with no wrapper layer.
+
+**Block**:
+A closure passed to a call with `do |args| … end`, in the Ruby sense. Definition bodies (`def … end`) are not Blocks.
+_Avoid_: lambda, do-block (for definition bodies)
