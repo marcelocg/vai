@@ -39,3 +39,14 @@ _Avoid_: reassignment, shadowing (Rust's term for the lowered form)
 
 **Mutation**:
 Assigning to, or calling a mutating method on, a `mut` Binding; the value changes in place.
+
+**Receiver mode**:
+How an instance method takes its receiver: borrowed (default), `mut` (mutably borrowed), `own` (by value), or none (`def self.x`, a class method).
+_Avoid_: self type, self kind
+
+**Borrow source**:
+The parameters, field, or `static` that a returned reference borrows from, written with `from`.
+_Avoid_: lifetime (for the vai-level concept)
+
+**Implicit lifetime**:
+The single lifetime a struct or enum with reference fields receives without the author naming it.
