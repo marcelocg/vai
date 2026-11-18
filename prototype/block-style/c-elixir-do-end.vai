@@ -1,0 +1,36 @@
+struct Account do
+  owner: String
+  balance: i64
+end
+
+impl Account do
+  def new(owner: String) -> Self do
+    Account { owner, balance: 0 }
+  end
+
+  def deposit(mut self, amount: i64) do
+    self.balance += amount
+  end
+
+  def status(self) -> Str do
+    case self.balance do
+      0 -> "empty"
+      b when b < 0 -> "overdrawn"
+      _ -> "ok"
+    end
+  end
+end
+
+def main do
+  accounts = [Account.new("ana"), Account.new("bia")]
+  for acc in accounts.iter_mut do
+    acc.deposit(100)
+  end
+  rich = accounts.iter.filter do |a|
+    threshold = 50
+    a.balance > threshold
+  end.collect
+  for a in rich do
+    println("#{a.owner} is #{a.status()}")
+  end
+end
