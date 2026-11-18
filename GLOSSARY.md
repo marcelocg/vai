@@ -28,3 +28,14 @@ Calling any Rust crate from vai source, and consuming vai code from Rust, with n
 **Block**:
 A closure passed to a call with `do |args| … end`, in the Ruby sense. Definition bodies (`def … end`) are not Blocks.
 _Avoid_: lambda, do-block (for definition bodies)
+
+**Binding**:
+A name introduced by assignment, a parameter or a pattern; immutable unless declared `mut`.
+_Avoid_: variable (for immutable bindings)
+
+**Rebinding**:
+Assigning to an immutable Binding in the same scope, which introduces a new Binding of that name; it may change type.
+_Avoid_: reassignment, shadowing (Rust's term for the lowered form)
+
+**Mutation**:
+Assigning to, or calling a mutating method on, a `mut` Binding; the value changes in place.
