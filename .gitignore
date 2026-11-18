@@ -1,0 +1,13 @@
+# Claude Code local state (worktrees, settings)
+.claude/
+
+# Rust / cargo
+/target/
+**/*.rs.bk
+
+# Editors / OS
+.idea/
+.vscode/
+*.swp
+.DS_Store
+Thumbs.db
