@@ -50,3 +50,7 @@ _Avoid_: lifetime (for the vai-level concept)
 
 **Implicit lifetime**:
 The single lifetime a struct or enum with reference fields receives without the author naming it.
+
+**Dot path**:
+A `.`-separated name in vai source whose segments lower to `::` or `.`, depending on scope and naming convention.
+_Avoid_: qualified name, namespace path
