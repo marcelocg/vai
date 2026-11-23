@@ -62,3 +62,7 @@ _Avoid_: type variable, auto-generic
 **Required method**:
 A trait method with no default body, marked `required def`.
 _Avoid_: abstract method, callback
+
+**Known macro**:
+A std/core Rust macro that vai source calls like a function, without `!`; part of the language spec.
+_Avoid_: built-in function, intrinsic
