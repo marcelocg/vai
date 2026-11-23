@@ -54,3 +54,11 @@ The single lifetime a struct or enum with reference fields receives without the 
 **Dot path**:
 A `.`-separated name in vai source whose segments lower to `::` or `.`, depending on scope and naming convention.
 _Avoid_: qualified name, namespace path
+
+**Implicit generic parameter**:
+An undeclared single capital letter in a function signature or `impl` header, taken to be a generic parameter.
+_Avoid_: type variable, auto-generic
+
+**Required method**:
+A trait method with no default body, marked `required def`.
+_Avoid_: abstract method, callback
