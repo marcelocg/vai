@@ -66,3 +66,15 @@ _Avoid_: abstract method, callback
 **Known macro**:
 A std/core Rust macro that vai source calls like a function, without `!`; part of the language spec.
 _Avoid_: built-in function, intrinsic
+
+**Tail value**:
+The last expression of a function with a declared return type, or of a closure, which becomes the block's result.
+_Avoid_: implicit return, last value
+
+**Unit-result function**:
+A function whose declared return type is a `Result` with `()` as its success type; its body ends without a value and succeeds implicitly.
+_Avoid_: void-result, fallible procedure
+
+**Optional shorthand**:
+`T?` in a type position, meaning an `Option` of everything to its left.
+_Avoid_: nullable type, maybe type
